@@ -1,7 +1,7 @@
 class Api::ProductsController < ApplicationController
 
   def all_products_action
-    @product = Product.all
+    @products = Product.all
     render "all_products.json.jb"
   end 
 
