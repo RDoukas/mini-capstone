@@ -18,10 +18,11 @@ class Api::ProductsController < ApplicationController
       image_url: params[:image_url],
       description: params[:description]
     )
+
     if @product.save
       render "show.json.jb"
     else 
-      render json: {error: @product.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity
     end 
   end 
 
@@ -37,7 +38,7 @@ class Api::ProductsController < ApplicationController
     if @product.save
       render "show.json.jb"
     else 
-      render json: {error: @product.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity
     end 
 
   end 
