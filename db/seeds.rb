@@ -57,3 +57,4 @@ Image.create!([
   {url: "https://bloomscape.com/wp-content/uploads/2019/05/bloomscape_product-fiddle-leaf-fig-stone-2-e1558203089576.jpg?ver=28682", 
   product_id:10}
 ])
+

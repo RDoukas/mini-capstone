@@ -24,7 +24,8 @@ class Api::ProductsController < ApplicationController
     @product = Product.new(
       name: params[:name],
       price: params[:price],
-      description: params[:description]
+      description: params[:description],
+    
     )
     if @product.save # happy path
       render 'show.json.jb'
