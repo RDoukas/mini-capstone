@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   validates :name, uniqueness: true, length: {minimum: 2, maximum: 100}
   validates :price, presence: true, numericality: {greater_than: 0}
   validates :description, length: {in: 10..500}
-  validates :image_url, presence: true, uniqueness: true
+ 
 
 
   
@@ -22,4 +22,7 @@ class Product < ApplicationRecord
   def total 
     price + tax
   end 
+
+  belongs_to :supplier
+  
 end
