@@ -21,12 +21,12 @@ Supplier.create!([
 
 
 Product.create!([
-  {name: "Burrito Succulent", price: "19.0",  description: "Long trailing succulents, perfect for hanging!"},
+  {name: "Burrito Succulent", price: "19.0",  description: "Long trailing succulents, perfect for hanging!", supplier_id: 1},
   {name: "Hanging Succulent Planter", price: "38.0", description: "Hanging succulent planter includes 4 pots, plants not included", supplier_id: 1},
   {name: "Aloe Vera Plant", price: "43.0", description: "Aloe Vera plant, 4 in nursery pot. Requires lots of sun and little water.",  supplier_id: 1},
   {name: "Tiny Cat Planter ", price: "14.0", description: "2 inch x 2 in x 1.7 inch. Great for Air Plants",  supplier_id: 1},
   {name: "Tradescantia Zebrina", price: "35.0", description: "Comes in a 6 in ceramic pot. Color options are: stone, indigo.",  supplier_id: 1},
-  {name: "Golden Pothos 4\"", price: "12.0",, description: "Comes in 4 in\" nursey pot.",  supplier_id: 1},
+  {name: "Golden Pothos 4", price: "12.0", description: "Comes in 4 in. nursey pot.",  supplier_id: 1},
   {name: "Triostart Stormanthe 4 in ", price: "16.0", description: "Variegated pink and white prayer plant. Comes in 4 in nursery pot.", supplier_id: 1},
   {name: "Burgundy Rubber Tree 4 in", price: "14.0",description: "Comes in 4 in nursery pot", supplier_id: 2},
   {name: "Monstera deliciosa, Swiss Cheese Plant", price: "50.0", description: "The Monstera Deliciosa or Split Leaf Philodendrum has been a favorite house plant for years – and with good reason. It’s wonderfully easy going, and freshens up any indoor corner. Comes in 10 in black planters pot", supplier_id: 1},

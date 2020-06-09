@@ -2,7 +2,7 @@ class Product < ApplicationRecord
 
   validates :name, uniqueness: true, length: { in: 1...100 }
   validates :price, presence: true, numericality: { greater_than: 0 }
-  # validates :description, length: { in: 10...500 }
+  validates :description, length: { in: 10...500 }
 
 
   def is_discounted?
@@ -23,5 +23,4 @@ class Product < ApplicationRecord
   #   Supplier.find_by(id: supplier_id)
   # end
   has_many :images
-
 end
