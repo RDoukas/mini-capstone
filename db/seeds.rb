@@ -58,3 +58,11 @@ Image.create!([
   product_id:10}
 ])
 
+Category.create!([{name: "Plants"},
+{name: "Pots"}])
+
+ProductCategory.create!([
+  {product_id: 3, category_id: 1},
+  {product_id: 1, category_id:1},
+  {product_id: 2, category_id: 2}
+  ])
