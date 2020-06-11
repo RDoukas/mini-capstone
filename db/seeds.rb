@@ -31,7 +31,7 @@ Product.create!([
   {name: "Burgundy Rubber Tree 4 in", price: "14.0",description: "Comes in 4 in nursery pot", supplier_id: 2},
   {name: "Monstera deliciosa, Swiss Cheese Plant", price: "50.0", description: "The Monstera Deliciosa or Split Leaf Philodendrum has been a favorite house plant for years – and with good reason. It’s wonderfully easy going, and freshens up any indoor corner. Comes in 10 in black planters pot", supplier_id: 1},
   {name: "Dracaena Dorado", price: "198.0", description: "The beautiful broadleaf Dracaena Dorado features dark green leaves with light chartreuse borders. Its beauty makes it a delightful indoor plant. But what makes this plant even more appealing are the emerald green canes in varying heights. Truly a ‘living’ conversation piece that will add a unique dimension to your indoor decor! Comes in 12 in ceramic pot.", supplier_id: 3},
-  {name: "Fiddle Leaf Fig", price: "195.0", description: "Tall, sculptural, and dramatic. This plant will flourish in the right conditions. The Fiddle Leaf Fig is easily recognizable and loved for its distinctive foliage. This tall, dramatic plant has very large, heavily veined, violin-shaped leaves that grow upright. It’s not bushy, making it a beautiful interior design addition for a brightly lit corner or cozy nook in your home. Comes in 12 in pot.", supplier_id: 1}
+  {name: "Dwarf Peach Tree", price: "99.99", description: "And because it’s a dwarf variety, you don't need a lot of room for it to perform year after year, especially since it’s self-fertile. You’ll have bushels of fresh peaches, right from your own backyard. And it’s easy to grow, accommodating most soil types, thriving in partial to full sun, and tolerating heat and humidity.", supplier_id: 2}
 ])
 
 
@@ -54,15 +54,28 @@ Image.create!([
   product_id: 8},
   {url: "https://www.plantvine.com/plants/Large-Monstera-Delic.jpg",
   product_id:9},
-  {url: "https://bloomscape.com/wp-content/uploads/2019/05/bloomscape_product-fiddle-leaf-fig-stone-2-e1558203089576.jpg?ver=28682", 
-  product_id:10}
-])
+  {url: "https://bloomscape.com/wp-content/uploads/2019/05/bloomscape_product-fiddle-leaf-fig-stone-2-e1558203089576.jpg?ver=28682", product_id: 10}, 
+  {url: "https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Harvester-Peach-Tree-450w_large.jpg?v=1549690382", 
+  product_id:11}
+  ])
 
 Category.create!([{name: "Plants"},
-{name: "Pots"}])
+{name: "Pots"},
+{name: "Misc."}])
 
 ProductCategory.create!([
+  {product_id: 1, category_id: 1},
+  {product_id: 2, category_id: 2},
   {product_id: 3, category_id: 1},
-  {product_id: 1, category_id:1},
-  {product_id: 2, category_id: 2}
+  {product_id: 4, category_id: 2},
+  {product_id: 5, category_id: 1},
+  {product_id: 6, category_id: 1},
+  {product_id: 7, category_id: 1},
+  {product_id: 8, category_id: 1},
+  {product_id: 9, category_id: 1},
+  {product_id: 10, category_id: 1},
+  {product_id: 11, category_id: 1},
+
   ])
+
+
