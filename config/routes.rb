@@ -11,7 +11,6 @@ Rails.application.routes.draw do
     delete "/products/:id" => 'products#destroy'
 
     post "/users" => "users#create"
-    patch "/users/:id" => 'users#update'
     post "/sessions" => "sessions#create"
 
     get "/orders" => "orders#index"

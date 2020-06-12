@@ -7,3 +7,4 @@
   tax: order.tax, 
   total: order.total
 }
+

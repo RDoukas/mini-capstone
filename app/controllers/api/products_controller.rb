@@ -10,6 +10,12 @@ class Api::ProductsController < ApplicationController
     if params[:discount]
       @products = @products.where("price < ?", 10)
     end
+
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      @products = category.products
+    end
+
     if params[:sort] == "price"
       if params[:sort_order] == "asc"
         @products = @products.order(:price)
@@ -28,7 +34,6 @@ class Api::ProductsController < ApplicationController
       price: params[:price],
       description: params[:description],
       supplier_id: params[:supplier_id]
-
     )
     if @product.save # happy path
       render 'show.json.jb'
@@ -62,5 +67,4 @@ class Api::ProductsController < ApplicationController
     render json: {message: "Product successfully destroyed"}
   end
 
-
-end 
+end
