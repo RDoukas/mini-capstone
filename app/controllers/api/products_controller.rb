@@ -4,18 +4,16 @@ class Api::ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    if params[:search]
-      @products = @products.where("name iLIKE ?", "%#{params[:search]}%")
-    end
-    if params[:discount]
-      @products = @products.where("price < ?", 10)
-    end
-
     if params[:category]
       category = Category.find_by(name: params[:category])
       @products = category.products
     end
-
+    if params[:search]
+      @products = @products.where("name iLIKE ?", "%#{params[:search]}%")
+    end
+    if params[:discount]
+      @products = @products.where("price > ?", 50)
+    end
     if params[:sort] == "price"
       if params[:sort_order] == "asc"
         @products = @products.order(:price)
@@ -62,9 +60,9 @@ class Api::ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find(params[:id])
-    @product.destroy
-    render json: {message: "Product successfully destroyed"}
+    @carted_product = current_user.carted_products.find_by(id: params[:id], status: "carted")
+    @carted_product.update(status: "removed")
+    render json: {status: "Carted product removed"}
   end
 
 end
