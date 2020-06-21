@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
     @product.supplier_id = params[:supplier_id]
     
     if @product.save
-    redirect_to "/products/#{@product.id}"
+      redirect_to "/products/#{@product.id}"
     else
       render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity
     end

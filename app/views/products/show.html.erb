@@ -1,6 +1,6 @@
 
   <h2><%= @product.name %></h2>
-  <img src="<%= @product.images %>">
+  <img src="<%= @product.images[0].url%>" alt="" width=100 length=100 >
   <h4>Price: <%= @product.price%></h2>
   <h4>Description: <%= @product.description %></h2>
   <h4>Total: <%= @product.total %></h2>
